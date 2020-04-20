@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    background-color: $primary_color;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid black;
+
+    #logo {
+        height: 100px;
+        img {
+            object-fit: contain;
+            height: 100%;
+        }
+    }
+    #raccolta-dischi {
+        font-size: 32px;
+        margin-left: 20px;
+    }
+}

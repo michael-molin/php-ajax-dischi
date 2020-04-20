@@ -1,0 +1,38 @@
+main {
+    background-color: $bg_color;
+    height: 100%;
+    padding: 50px 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    height: auto;
+    background-color: $primary_color;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card {
+    margin: 20px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: $bg_card_color;
+    border: 1px solid $font_color;
+
+    img {
+        width: 160px;
+        height: 160px;
+        object-fit:cover;
+        margin-bottom: 20px;
+    }
+}
