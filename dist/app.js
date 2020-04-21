@@ -93,7 +93,26 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+$(document).ready(function () {
+  var source = $("#card-template").html();
+  var templateCard = Handlebars.compile(source);
+  $.ajax({
+    url: 'server.php',
+    method: 'GET',
+    success: function success(data) {
+      var dischi = data;
 
+      for (var i = 0; i < dischi.length; i++) {
+        var disco = dischi[i];
+        var cardCompilata = templateCard(disco);
+        $('.container').append(cardCompilata);
+      }
+    },
+    error: function error() {
+      alert('errore recupero informazioni');
+    }
+  });
+});
 
 /***/ }),
 
